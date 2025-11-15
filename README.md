@@ -11,8 +11,11 @@ The goal is to create an educational environment where:
 - Parents stay informed through dedicated monitoring dashboards
 
 
-# Frontend Stack 
+# Stack 
 
 - HTML
 - CSS
 - Javascript
+- PHP
+- SQL
+  
