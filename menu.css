@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+   
+/* Menu Container with Floating Animation */
+.menu {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 90px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: white;
+    margin: 0 0 30px 0;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Base Button Styles */
+button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Colorful Button Schemes */
+.btn-game {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+.btn-game:hover {
+    background: linear-gradient(135deg, #FF5252, #FF7043);
+}
+
+.btn-quiz {
+    background: linear-gradient(135deg, #4ECDC4, #44A08D);
+}
+
+.btn-quiz:hover {
+    background: linear-gradient(135deg, #3DBDB3, #3A9183);
+}
+
+.btn-story {
+    background: linear-gradient(135deg, #A770EF, #CF8BF3);
+}
+
+.btn-story:hover {
+    background: linear-gradient(135deg, #9660DF, #BE7BE3);
+}
+
+.btn-parent {
+    background: linear-gradient(135deg, #FFA07A, #FFB347);
+}
+
+.btn-parent:hover {
+    background: linear-gradient(135deg, #FF906A, #FFA337);
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mascot {
+        display: none;
+    }
+    
+    .menu {
+        padding: 40px;
+    }
+    
+    button {
+        font-size: 1.2em;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}
