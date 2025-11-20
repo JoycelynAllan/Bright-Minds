@@ -1,0 +1,235 @@
+body{
+    background-color: skyblue;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parent_dashboard{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top h1{
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.profile p{
+    margin: 0;
+    cursor: pointer;
+}
+
+.middle, .activity, .parental_control{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.today, .weekly, .num_game, .quizes{
+    background-color: #FFFDD0;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+}
+
+.today:hover, .weekly:hover, .num_game:hover, .quizes:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.today span, .weekly span, .num_game span, .quizes span{
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: skyblue;
+    margin: 10px 0 5px 0;
+}
+
+.activity{
+    margin-bottom: 30px;
+}
+
+.activity_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.activity_top h2{
+    color: white;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.activity_top button{
+    background-color: #FFFDD0;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity_top button:hover{
+    background-color: #fff4a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFDD0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity1:hover{
+    transform: translateX(5px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity1 p{
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.activity1 .time{
+    color: #666;
+    font-size: 14px;
+}
+
+.parental_control h2{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.time_limit,
+.activity_type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+.time_limit p,
+.activity_type p{
+    margin: 0;
+    font-size: 16px;
+}
+
+input{
+    height: 35px;
+    width: 60px;
+    background-color: #FFFDD0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+input:hover{
+    background-color: #fff4a3;
+    transform: scale(1.05);
+}
+
+select{
+    height: 35px;
+    width: 120px;
+    background-color: #FFFDD0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+select:hover{
+    background-color: #fff4a3;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .stats{
+        flex-wrap: wrap;
+    }
+    
+    .today, .weekly, .num_game, .quizes{
+        flex: 1 1 45%;
+    }
+    
+    .top h1{
+        font-size: 22px;
+    }
+    
+    .profile{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+}

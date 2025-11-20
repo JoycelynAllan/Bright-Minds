@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard</title>
+    <link rel="stylesheet" href="parentDashboard.css">
+</head>
+
+<body>
+    <div class="parent_dashboard">
+        <div class="top">
+            <h1>Parent Dashboard</h1>
+            <div class="profile">
+                <span class="username" id="parentName">Parent Name</span>
+                <button class="back-btn" onclick="window.location.href='menu.html'" style="margin-left: 20px;">← Back to Menu</button>
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="stats">
+                <div class="today">Today's Playtime <span> 3 </span> hours</div>
+                <div class="weekly">Weekly Time Spent <span>23</span> hours</div>
+                <div class="num_game"> Number of Games <span>5</span></div>
+                <div class="quizes">Number of quizzes taken <span>6</span></div>
+            </div>
+        </div>
+
+        <div class="activity">
+            <div class="activity_top">
+                <h2>Recent Activity</h2>
+                <button type="button">View All</button>
+            </div>
+            <div class="activity_details">
+                <div class="activity1">
+                    <p id="childActivity1">Child played a game</p>
+                    <p class="time">2 hours ago</p>
+                </div>
+                <div class="activity1">
+                    <p id="childActivity2">Child took a quiz</p>
+                    <p class="time">4 hours ago</p>
+                </div>
+                <div class="activity1">
+                    <p id="childActivity3">Child read a story</p>
+                    <p class="time">6 hours ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parental_control">
+            <h2>Parental Controls</h2>
+            <div class="time_limit">
+                <p> Time Limit (hours per day) </p>
+                <input type="number" value="2" min="0" max="24">
+            </div>
+            <div class="activity_type">
+                <p>Activity type</p>
+                <select name="activity" id="activity">
+                    <option value="all">All Activities</option>
+                    <option value="games">Games Only</option>
+                    <option value="quizzes">Quizzes Only</option>
+                    <option value="stories">Stories Only</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Load user data
+        window.onload = function() {
+            const userData = sessionStorage.getItem('brightMindsUser');
+            if (userData) {
+                const user = JSON.parse(userData);
+                document.getElementById('parentName').textContent = `Parent of ${user.username}`;
+                document.getElementById('childActivity1').textContent = `${user.username} played a game`;
+                document.getElementById('childActivity2').textContent = `${user.username} took a quiz`;
+                document.getElementById('childActivity3').textContent = `${user.username} read a story`;
+            }
+        };
+    </script>
+</body>
+
+</html>
